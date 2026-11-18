@@ -1,0 +1,71 @@
+/* Páginas legales – se carga después de styles.css y reutiliza sus variables */
+
+/* Encabezado de página */
+.page-hero { background: var(--mint); border-top: 8px solid var(--orange); }
+.page-hero__inner { display: flex; flex-direction: column; gap: 16px; padding-top: 40px; padding-bottom: 56px; }
+.page-hero h1 { font-size: clamp(2.25rem, 5vw, 3.25rem); }
+.page-hero__org { font-size: 1.1875rem; color: var(--muted); }
+.page-hero__date { font-size: .9375rem; font-weight: 600; color: var(--green-dark); }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 8px; font-size: .9375rem; color: var(--muted); }
+.breadcrumb li + li::before { content: "/"; margin-right: 8px; }
+.breadcrumb a { text-decoration: underline; text-underline-offset: 3px; }
+.breadcrumb a:hover { color: var(--green); }
+
+/* Maquetación: índice + texto */
+.legal { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; padding-top: 32px; padding-bottom: 72px; }
+.legal__aside { position: sticky; top: 24px; padding-top: 16px; }
+.toc ol { counter-reset: toc; list-style: none; margin: 8px 0 0; padding-left: 0; }
+.toc li { list-style: none; }
+.toc a { display: flex; gap: 12px; padding: 8px 0; font-size: .9375rem; color: var(--muted); }
+.toc a::before { counter-increment: toc; content: counter(toc) "."; min-width: 22px; font-weight: 600; color: var(--green); }
+.toc a:hover, .toc a[aria-current="true"] { color: var(--green); }
+.toc a[aria-current="true"] { font-weight: 600; }
+
+/* Texto de la política */
+.policy { max-width: 760px; counter-reset: sec; }
+.policy section { display: flex; flex-direction: column; gap: 16px; padding: 40px 0; border-top: 1px solid var(--line); scroll-margin-top: 16px; }
+.policy section:first-child { border-top: 0; padding-top: 16px; }
+.policy h2 { display: flex; align-items: center; gap: 14px; font-size: clamp(1.375rem, 3vw, 1.75rem); }
+.policy h2::before { counter-increment: sec; content: counter(sec); display: inline-flex; align-items: center; justify-content: center; flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--green); color: var(--white); font-size: 1.0625rem; }
+.policy p, .policy li { font-size: 1.0625rem; line-height: 1.7; }
+.policy ul { display: flex; flex-direction: column; gap: 10px; }
+.policy li { position: relative; padding-left: 26px; }
+.policy li::before { content: ""; position: absolute; left: 4px; top: .7em; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); }
+.lnk { color: var(--green); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.lnk:hover { color: var(--green-dark); }
+.lnk--lg { font-size: 1.25rem; }
+
+.box { display: flex; flex-direction: column; gap: 6px; background: var(--mint); border-radius: var(--radius); padding: 20px 24px; }
+.box--callout { flex-direction: row; align-items: flex-start; gap: 14px; color: var(--green-dark); }
+.box--callout svg { flex: none; margin-top: 2px; color: var(--green); }
+.contact-card { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--orange); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; gap: 8px; }
+.contact-card h3 { font-size: 1.375rem; }
+.contact-card p { font-size: 1.0625rem; overflow-wrap: anywhere; }
+
+/* Pie simple */
+.legal-footer { border-top: 1px solid var(--line); }
+.legal-footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding-top: 36px; padding-bottom: 36px; }
+.legal-footer img { height: 48px; width: auto; }
+.legal-footer nav { display: flex; flex-wrap: wrap; gap: 24px; font-weight: 600; }
+.legal-footer nav a:hover { color: var(--green); text-decoration: underline; }
+.legal-footer p { flex-basis: 100%; font-size: .875rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .legal { grid-template-columns: 1fr; gap: 8px; }
+  .legal__aside { position: static; padding-top: 0; }
+  .toc { background: var(--mint); border-radius: var(--radius); padding: 20px 24px; }
+}
+@media (max-width: 520px) {
+  .policy h2 { align-items: flex-start; }
+}
+
+/* Impresión: solo el texto */
+@media print {
+  .site-header, .legal__aside, .skip-link, .legal-footer nav, .breadcrumb { display: none !important; }
+  body { background: #fff; }
+  .page-hero { background: none; border-top: 0; }
+  .legal { display: block; padding-top: 0; }
+  .policy section { break-inside: avoid-page; padding: 20px 0; }
+  a { color: inherit !important; }
+}

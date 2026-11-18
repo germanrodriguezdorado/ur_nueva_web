@@ -93,6 +93,26 @@ address { font-style: normal; }
 .card--doc h3 { font-size: 1.25rem; margin-bottom: 6px; }
 .card--doc .more { margin-top: 6px; }
 
+/* Carrusel de profesionales */
+.section__bar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.carousel__controls { display: flex; gap: 10px; }
+.carousel__btn { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--green); background: transparent; color: var(--green); font: 600 1.75rem/1 var(--font-body); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; padding: 0 0 4px; }
+.carousel__btn:hover:not(:disabled) { background: var(--mint); }
+.carousel__btn:disabled { opacity: .35; cursor: default; }
+.carousel__track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; padding: 4px 2px 16px; scrollbar-width: thin; scrollbar-color: var(--green) var(--mint); }
+.carousel__item { flex: 0 0 260px; scroll-snap-align: start; display: flex; }
+.carousel__item .card { width: 100%; }
+.carousel__btn--toggle { display: none; padding: 0; }
+.js .carousel__btn--toggle { display: inline-flex; }
+.carousel__btn--toggle .i-play { display: none; }
+.carousel__btn--toggle[data-playing="false"] .i-play { display: block; }
+.carousel__btn--toggle[data-playing="false"] .i-pause { display: none; }
+@media (max-width: 520px) {
+  .carousel__item { flex-basis: min(260px, 78vw); }
+  .carousel__btn[data-carousel-prev], .carousel__btn[data-carousel-next] { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .carousel__track { scroll-behavior: auto; } }
+
 /* Banda de especialidades */
 .band { background: var(--green-dark); color: var(--white); padding: 64px 0; }
 .band__inner { display: flex; flex-direction: column; gap: 28px; }

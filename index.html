@@ -68,8 +68,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/main.js" defer></script>
 
     <!-- Datos estructurados (schema.org) -->
     <script type="application/ld+json">
@@ -138,7 +138,7 @@
       <div class="w header-inner">
         <a class="logo" href="/" aria-label="Clínica Urgenterap, inicio">
           <img
-            src="logo.png"
+            src="img/logo-urgenterap.png"
             alt="Clínica Urgenterap"
             width="300"
             height="98"
@@ -207,12 +207,12 @@
           <picture>
             <source
               type="image/webp"
-              srcset="foto_clinica.jpg 640w, foto_clinica.jpg 1200w"
+              srcset="img/clinica-640.jpg 640w, img/clinica-1200.jpg 1200w"
               sizes="(max-width: 900px) 100vw, 540px"
             />
             <img
-              src="foto_clinica.jpg"
-              srcset="foto_clinica.jpg 640w, foto_clinica.jpg 1200w"
+              src="img/clinica-1200.jpg"
+              srcset="img/clinica-640.jpg 640w, img/clinica-1200.jpg 1200w"
               sizes="(max-width: 900px) 100vw, 540px"
               width="1200"
               height="668"
@@ -411,73 +411,295 @@
         </div>
       </section>
 
-      <!-- TODO: reemplazar fotos, nombres y especialidades por los datos reales de cada profesional -->
+      <!-- TODO: reemplazar fotos, nombres, especialidades y alt por los datos reales de cada profesional (10 tarjetas; las fotos se repiten como provisorias) -->
       <section class="w section" aria-labelledby="equipo-t">
-        <header class="section__head">
-          <p class="eyebrow">Equipo médico</p>
-          <h2 id="equipo-t">Elegí a tu profesional</h2>
-        </header>
-        <div class="grid grid--sm">
-          <article class="card card--doc">
-            <picture>
-              <source type="image/webp" srcset="medico-1.png" />
-              <img
-                src="medico-1.png"
-                width="360"
-                height="360"
-                alt="Profesional de Clínica Urgenterap"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <h3>Nombre y apellido</h3>
-            <p>Especialidad</p>
-            <a
-              class="more"
-              href="https://horarios.clinicaurgenterap.com/reserve"
-              >Reservar hora →</a
+        <div class="section__bar">
+          <header class="section__head">
+            <p class="eyebrow">Equipo médico</p>
+            <h2 id="equipo-t">Elegí a tu profesional</h2>
+          </header>
+          <div class="carousel__controls">
+            <button
+              class="carousel__btn carousel__btn--toggle"
+              type="button"
+              data-carousel-toggle
+              data-playing="true"
+              aria-label="Pausar desplazamiento automático"
+              aria-controls="equipo-lista"
             >
-          </article>
-          <article class="card card--doc">
-            <picture>
-              <source type="image/webp" srcset="medico-2.png" />
-              <img
-                src="medico-2.png"
-                width="360"
-                height="360"
-                alt="Profesional de Clínica Urgenterap"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <h3>Nombre y apellido</h3>
-            <p>Especialidad</p>
-            <a
-              class="more"
-              href="https://horarios.clinicaurgenterap.com/reserve"
-              >Reservar hora →</a
+              <svg
+                class="i-pause"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="3" y="2" width="3.5" height="12" rx="1" />
+                <rect x="9.5" y="2" width="3.5" height="12" rx="1" />
+              </svg>
+              <svg
+                class="i-play"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M4 2.5v11l9-5.5z" />
+              </svg>
+            </button>
+            <button
+              class="carousel__btn"
+              type="button"
+              data-carousel-prev
+              aria-label="Profesionales anteriores"
+              aria-controls="equipo-lista"
             >
-          </article>
-          <article class="card card--doc">
-            <picture>
-              <source type="image/webp" srcset="medico-3.png" />
-              <img
-                src="medico-3.png"
-                width="360"
-                height="360"
-                alt="Profesional de Clínica Urgenterap"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <h3>Nombre y apellido</h3>
-            <p>Especialidad</p>
-            <a
-              class="more"
-              href="https://horarios.clinicaurgenterap.com/reserve"
-              >Reservar hora →</a
+              ‹
+            </button>
+            <button
+              class="carousel__btn"
+              type="button"
+              data-carousel-next
+              aria-label="Más profesionales"
+              aria-controls="equipo-lista"
             >
-          </article>
+              ›
+            </button>
+          </div>
+        </div>
+        <div
+          class="carousel"
+          data-carousel
+          role="region"
+          aria-roledescription="carrusel"
+          aria-label="Equipo médico"
+        >
+          <ul class="carousel__track" id="equipo-lista" tabindex="0">
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-1.png" />
+                  <img
+                    src="img/medico-1.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-2.png" />
+                  <img
+                    src="img/medico-2.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-3.png" />
+                  <img
+                    src="img/medico-3.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-1.png" />
+                  <img
+                    src="img/medico-1.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-2.png" />
+                  <img
+                    src="img/medico-2.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-3.png" />
+                  <img
+                    src="img/medico-3.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-1.png" />
+                  <img
+                    src="img/medico-1.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-2.png" />
+                  <img
+                    src="img/medico-2.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-3.png" />
+                  <img
+                    src="img/medico-3.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+            <li class="carousel__item">
+              <article class="card card--doc">
+                <picture>
+                  <source type="image/webp" srcset="img/medico-1.png" />
+                  <img
+                    src="img/medico-1.png"
+                    width="360"
+                    height="360"
+                    alt="Profesional de Clínica Urgenterap"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+                <h3>Nombre y apellido</h3>
+                <p>Especialidad</p>
+                <a
+                  class="more"
+                  href="https://horarios.clinicaurgenterap.com/reserve"
+                  >Reservar hora →</a
+                >
+              </article>
+            </li>
+          </ul>
         </div>
         <p>
           <a
@@ -522,7 +744,7 @@
     <footer class="w site-footer" id="contacto">
       <div class="site-footer__col">
         <img
-          src="logo.png"
+          src="img/logo-urgenterap.png"
           alt="Clínica Urgenterap"
           width="300"
           height="98"
@@ -550,6 +772,7 @@
         <a href="https://horarios.clinicaurgenterap.com/acceso_privados"
           >Acceso privados</a
         >
+        <a href="legal.html">Política de privacidad</a>
       </nav>
       <p class="site-footer__legal muted">
         © <span id="year">2026</span> Clínica Urgenterap. Todos los derechos
