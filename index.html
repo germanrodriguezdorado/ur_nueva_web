@@ -1,778 +1,404 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es-UY">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script>
-      document.documentElement.classList.add("js");
-    </script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js');</script>
 
-    <!-- SEO básico -->
-    <title>Clínica Urgenterap – Consultas y estudios médicos en Carrasco</title>
-    <meta
-      name="description"
-      content="Clínica médica privada en Carrasco, Montevideo. Consultas con especialistas, ecografías, análisis clínicos, radiografías y libreta de conducir. Reservá tu hora online."
-    />
-    <link rel="canonical" href="https://clinicaurgenterap.com/" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#006038" />
+  <!-- SEO básico -->
+  <title>Clínica Urgenterap – Consultas y estudios médicos en Carrasco</title>
+  <meta name="description" content="Clínica médica privada en Carrasco, Montevideo. Consultas con especialistas, ecografías, análisis clínicos, radiografías y libreta de conducir. Reservá tu hora online.">
+  <link rel="canonical" href="https://clinicaurgenterap.com/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#006038">
 
-    <!-- Open Graph / Twitter -->
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="es_UY" />
-    <meta property="og:site_name" content="Clínica Urgenterap" />
-    <meta
-      property="og:title"
-      content="Clínica Urgenterap – Consultas y estudios médicos en Carrasco"
-    />
-    <meta
-      property="og:description"
-      content="Medicina altamente familiar. Consultas con especialistas, estudios y urgencias en Potosí 1690, Carrasco, Montevideo."
-    />
-    <meta property="og:url" content="https://clinicaurgenterap.com/" />
-    <meta
-      property="og:image"
-      content="https://clinicaurgenterap.com/img/og-image.jpg"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Fachada de Clínica Urgenterap en Potosí 1690, Carrasco"
-    />
-    <meta name="twitter:card" content="summary_large_image" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_UY">
+  <meta property="og:site_name" content="Clínica Urgenterap">
+  <meta property="og:title" content="Clínica Urgenterap – Consultas y estudios médicos en Carrasco">
+  <meta property="og:description" content="Medicina altamente familiar. Consultas con especialistas, estudios y urgencias en Potosí 1690, Carrasco, Montevideo.">
+  <meta property="og:url" content="https://clinicaurgenterap.com/">
+  <meta property="og:image" content="https://clinicaurgenterap.com/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Fachada de Clínica Urgenterap en Potosí 1690, Carrasco">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Iconos (provisorios: reemplazar por los oficiales de la clínica) -->
-    <link rel="icon" href="favicon.ico" sizes="32x32" />
-    <link rel="icon" href="favicon.ico" sizes="192x192" />
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+  <!-- Icono -->
+  <link rel="icon" href="img/favicon.ico" sizes="16x16" type="image/x-icon">
 
-    <!-- Rendimiento: fuentes e imagen principal (LCP) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="image"
-      type="image/webp"
-      href="img/clinica-1200.webp"
-      imagesrcset="img/clinica-640.webp 640w, img/clinica-1200.webp 1200w"
-      imagesizes="(max-width: 900px) 100vw, 540px"
-      fetchpriority="high"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/main.js" defer></script>
+  <!-- Rendimiento: fuentes e imagen principal (LCP) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" type="image/webp" href="img/clinica-1200.webp" imagesrcset="img/clinica-640.webp 640w, img/clinica-1200.webp 1200w" imagesizes="(max-width: 900px) 100vw, 540px" fetchpriority="high">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 
-    <!-- Datos estructurados (schema.org) -->
-    <script type="application/ld+json">
+  <!-- Datos estructurados (schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
       {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebSite",
-            "@id": "https://clinicaurgenterap.com/#website",
-            "url": "https://clinicaurgenterap.com/",
-            "name": "Clínica Urgenterap",
-            "inLanguage": "es-UY",
-            "publisher": { "@id": "https://clinicaurgenterap.com/#clinic" }
-          },
-          {
-            "@type": "MedicalClinic",
-            "@id": "https://clinicaurgenterap.com/#clinic",
-            "name": "Clínica Urgenterap",
-            "slogan": "Medicina altamente familiar",
-            "description": "Clínica médica privada en Carrasco, Montevideo. Consultas con especialistas, estudios, análisis clínicos, radiografías digitales y libreta de conducir.",
-            "url": "https://clinicaurgenterap.com/",
-            "logo": "https://clinicaurgenterap.com/img/logo-urgenterap.png",
-            "image": "https://clinicaurgenterap.com/img/og-image.jpg",
-            "telephone": "+598 2600 0806",
-            "email": "contacto@clinicaurgenterap.com",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Potosí 1690",
-              "addressLocality": "Montevideo",
-              "addressRegion": "Montevideo",
-              "addressCountry": "UY"
-            },
-            "openingHoursSpecification": [
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday"
-                ],
-                "opens": "07:45",
-                "closes": "21:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "07:45",
-                "closes": "20:00"
-              }
-            ],
-            "sameAs": [
-              "https://www.instagram.com/urgenterap/",
-              "https://www.facebook.com/Urgenterap/"
-            ]
-          }
+        "@type": "WebSite",
+        "@id": "https://clinicaurgenterap.com/#website",
+        "url": "https://clinicaurgenterap.com/",
+        "name": "Clínica Urgenterap",
+        "inLanguage": "es-UY",
+        "publisher": { "@id": "https://clinicaurgenterap.com/#clinic" }
+      },
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://clinicaurgenterap.com/#clinic",
+        "name": "Clínica Urgenterap",
+        "slogan": "Medicina altamente familiar",
+        "description": "Clínica médica privada en Carrasco, Montevideo. Consultas con especialistas, estudios, análisis clínicos, radiografías digitales y libreta de conducir.",
+        "url": "https://clinicaurgenterap.com/",
+        "logo": "https://clinicaurgenterap.com/img/logo-urgenterap.png",
+        "image": "https://clinicaurgenterap.com/img/og-image.jpg",
+        "telephone": "+598 2600 0806",
+        "email": "contacto@clinicaurgenterap.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Potosí 1690",
+          "addressLocality": "Montevideo",
+          "addressRegion": "Montevideo",
+          "addressCountry": "UY"
+        },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:45", "closes": "21:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:45", "closes": "20:00" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/urgenterap/",
+          "https://www.facebook.com/Urgenterap/"
         ]
       }
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <header class="site-header">
-      <div class="w header-inner">
-        <a class="logo" href="/" aria-label="Clínica Urgenterap, inicio">
-          <img
-            src="img/logo-urgenterap.png"
-            alt="Clínica Urgenterap"
-            width="300"
-            height="98"
-          />
-        </a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="menu"
-        >
-          Menú
-        </button>
-        <nav class="site-nav" id="menu" aria-label="Principal">
-          <a href="#nosotros">Nosotros</a>
-          <a href="#servicios">Servicios</a>
-          <a href="https://clinicaurgenterap.com/cartilla-de-medicos/"
-            >Médicos</a
-          >
-          <a href="#contacto">Contacto</a>
-          <a
-            class="btn btn--primary"
-            href="https://horarios.clinicaurgenterap.com/reserve"
-            >Reservá tu hora</a
-          >
-        </nav>
-      </div>
-    </header>
-
-    <main id="contenido">
-      <section class="w hero" id="nosotros">
-        <div class="hero__text">
-          <p class="motto">
-            <span class="dot" aria-hidden="true"></span>Medicina altamente
-            familiar
-          </p>
-          <h1>
-            Consultas y estudios médicos particulares
-            <span class="accent">en Carrasco</span>
-          </h1>
-          <p class="lead">
-            Clínica médica privada en el centro de Carrasco, con más de 50 años
-            de reconocida trayectoria. Atendemos urgencias y contamos con
-            policlínicas de todas las especialidades médicas y quirúrgicas.
-          </p>
-          <div class="actions">
-            <a
-              class="btn btn--accent"
-              href="https://horarios.clinicaurgenterap.com/reserve"
-              >Reservá tu hora</a
-            >
-            <a class="btn btn--outline" href="tel:+59826000806"
-              >Llamar al 2600 0806</a
-            >
-            <a class="btn btn--outline" href="https://wa.me/59892962189"
-              >Consultar por WhatsApp</a
-            >
-          </div>
-          <ul class="stats">
-            <li><strong>50+</strong> años juntos</li>
-            <li><strong>80+</strong> profesionales</li>
-            <li><strong>4.3</strong> en Google · 22 reseñas</li>
-          </ul>
-        </div>
-        <div class="hero__media">
-          <picture>
-            <source
-              type="image/webp"
-              srcset="img/clinica-640.jpg 640w, img/clinica-1200.jpg 1200w"
-              sizes="(max-width: 900px) 100vw, 540px"
-            />
-            <img
-              src="img/clinica-1200.jpg"
-              srcset="img/clinica-640.jpg 640w, img/clinica-1200.jpg 1200w"
-              sizes="(max-width: 900px) 100vw, 540px"
-              width="1200"
-              height="668"
-              alt="Fachada de Clínica Urgenterap en Potosí 1690, Carrasco"
-              fetchpriority="high"
-              decoding="async"
-            />
-          </picture>
-          <ul class="hours">
-            <li><strong>Lun a vie</strong> 7:45 a 21:00</li>
-            <li><strong>Sábados</strong> 7:45 a 20:00</li>
-            <li>Potosí 1690, Carrasco</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="w section section--tight" aria-labelledby="accesos-t">
-        <h2 class="sr-only" id="accesos-t">Cómo podemos ayudarte</h2>
-        <div class="grid">
-          <article class="card card--top">
-            <h3>
-              <a
-                class="card__link"
-                href="https://clinicaurgenterap.com/cartilla-de-medicos/"
-                >Buscar especialista</a
-              >
-            </h3>
-            <p>Encontrá al profesional indicado para tu consulta.</p>
-            <span class="more" aria-hidden="true">Buscar →</span>
-          </article>
-          <article class="card card--top">
-            <h3>
-              <a
-                class="card__link"
-                href="https://horarios.clinicaurgenterap.com/reserve"
-                >Reservar estudio</a
-              >
-            </h3>
-            <p>Ecografías, estudios cardiológicos, radiografías y más.</p>
-            <span class="more" aria-hidden="true">Reservar →</span>
-          </article>
-          <article class="card card--top">
-            <h3>Contáctanos</h3>
-            <p>Escribinos o llamanos y te orientamos.</p>
-            <div class="card__actions">
-              <a class="more" href="https://wa.me/59892962189"
-                >WhatsApp 092 962 189 →</a
-              >
-              <a class="more" href="tel:+59826000806">Llamar al 2600 0806 →</a>
-            </div>
-          </article>
-        </div>
-        <p class="note">
-          ¿Ya tenés una hora?
-          <a href="https://horarios.clinicaurgenterap.com/cancelar_consulta"
-            >Cancelar cita</a
-          >
-        </p>
-      </section>
-
-      <section class="w section" id="servicios" aria-labelledby="servicios-t">
-        <header class="section__head">
-          <p class="eyebrow">Servicios</p>
-          <h2 id="servicios-t">Todo en un mismo lugar</h2>
-        </header>
-        <div class="grid">
-          <article class="card">
-            <h3>
-              <a
-                class="card__link"
-                href="https://clinicaurgenterap.com/consultas-con-especialistas/"
-                >Consultas y especialidades</a
-              >
-            </h3>
-            <p>Medicina interna, especialidades y atención odontológica.</p>
-            <span class="more" aria-hidden="true">Ver más →</span>
-          </article>
-          <article class="card">
-            <h3>
-              <a
-                class="card__link"
-                href="https://clinicaurgenterap.com/estudios-medicos-principales/"
-                >Estudios médicos</a
-              >
-            </h3>
-            <p>
-              Ecografías, estudios cardiológicos, colposcopias, EcoDoppler,
-              flujometrías y monitoreos fetales.
-            </p>
-            <span class="more" aria-hidden="true">Ver más →</span>
-          </article>
-          <article class="card">
-            <h3>
-              <a
-                class="card__link"
-                href="https://horarios.clinicaurgenterap.com/castro_gherardi"
-                >Análisis clínicos</a
-              >
-            </h3>
-            <p>
-              En convenio con el laboratorio Castro-Gherardi: sangre, orina,
-              bacteriología y PAP.
-            </p>
-            <span class="more" aria-hidden="true">Ver más →</span>
-          </article>
-          <article class="card">
-            <h3>
-              <a
-                class="card__link"
-                href="https://horarios.clinicaurgenterap.com/reserve"
-                >Radiografías digitales</a
-              >
-            </h3>
-            <p>Equipo digital de última generación.</p>
-            <span class="more" aria-hidden="true">Reservar →</span>
-          </article>
-          <article class="card">
-            <h3>
-              <a
-                class="card__link"
-                href="https://clinicaurgenterap.com/libreta-de-conducir-montevideo-y-canelones/"
-                >Libreta de conducir</a
-              >
-            </h3>
-            <p>
-              Habilitados por las Intendencias de Montevideo y Canelones para el
-              examen médico de libreta amateur.
-            </p>
-            <span class="more" aria-hidden="true">Ver más →</span>
-          </article>
-          <article class="card">
-            <h3>
-              <a
-                class="card__link"
-                href="https://horarios.clinicaurgenterap.com/reserve"
-                >Seguros médicos privados</a
-              >
-            </h3>
-            <p>
-              Atención a socios de Blue Cross &amp; Blue Shield, Medicare y
-              Summum.
-            </p>
-            <span class="more" aria-hidden="true">Reservar →</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="w section" aria-labelledby="destacadas-t">
-        <h2 class="h2--sm" id="destacadas-t">Prestaciones más buscadas</h2>
-        <div class="grid grid--sm">
-          <!-- Ajustar los enlaces si cada agenda tiene su propia URL de reserva -->
-          <article class="card card--top">
-            <h3>
-              <a
-                class="card__link"
-                href="https://horarios.clinicaurgenterap.com/reserve"
-                >Ecografías</a
-              >
-            </h3>
-            <p>Reservá tu ecografía en pocos pasos.</p>
-            <span class="more" aria-hidden="true">Ver disponibilidad →</span>
-          </article>
-          <article class="card card--top">
-            <h3>
-              <a
-                class="card__link"
-                href="https://horarios.clinicaurgenterap.com/reserve"
-                >Dermatología</a
-              >
-            </h3>
-            <p>Consultas para el cuidado de tu piel.</p>
-            <span class="more" aria-hidden="true">Ver disponibilidad →</span>
-          </article>
-          <article class="card card--top">
-            <h3>
-              <a
-                class="card__link"
-                href="https://horarios.clinicaurgenterap.com/reserve"
-                >Cardiología</a
-              >
-            </h3>
-            <p>Consultas y estudios cardiológicos.</p>
-            <span class="more" aria-hidden="true">Ver disponibilidad →</span>
-          </article>
-          <article class="card card--top">
-            <h3>
-              <a
-                class="card__link"
-                href="https://clinicaurgenterap.com/libreta-de-conducir-montevideo-y-canelones/"
-                >Libreta de conducir</a
-              >
-            </h3>
-            <p>Examen médico para libreta amateur en Montevideo y Canelones.</p>
-            <span class="more" aria-hidden="true">Ver disponibilidad →</span>
-          </article>
-        </div>
-      </section>
-
-      <!-- TODO: reemplazar fotos, nombres, especialidades y alt por los datos reales de cada profesional (10 tarjetas; las fotos se repiten como provisorias) -->
-      <section class="w section" aria-labelledby="equipo-t">
-        <div class="section__bar">
-          <header class="section__head">
-            <p class="eyebrow">Equipo médico</p>
-            <h2 id="equipo-t">Elegí a tu profesional</h2>
-          </header>
-          <div class="carousel__controls">
-            <button
-              class="carousel__btn carousel__btn--toggle"
-              type="button"
-              data-carousel-toggle
-              data-playing="true"
-              aria-label="Pausar desplazamiento automático"
-              aria-controls="equipo-lista"
-            >
-              <svg
-                class="i-pause"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <rect x="3" y="2" width="3.5" height="12" rx="1" />
-                <rect x="9.5" y="2" width="3.5" height="12" rx="1" />
-              </svg>
-              <svg
-                class="i-play"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="M4 2.5v11l9-5.5z" />
-              </svg>
-            </button>
-            <button
-              class="carousel__btn"
-              type="button"
-              data-carousel-prev
-              aria-label="Profesionales anteriores"
-              aria-controls="equipo-lista"
-            >
-              ‹
-            </button>
-            <button
-              class="carousel__btn"
-              type="button"
-              data-carousel-next
-              aria-label="Más profesionales"
-              aria-controls="equipo-lista"
-            >
-              ›
-            </button>
-          </div>
-        </div>
-        <div
-          class="carousel"
-          data-carousel
-          role="region"
-          aria-roledescription="carrusel"
-          aria-label="Equipo médico"
-        >
-          <ul class="carousel__track" id="equipo-lista" tabindex="0">
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-1.png" />
-                  <img
-                    src="img/medico-1.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-2.png" />
-                  <img
-                    src="img/medico-2.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-3.png" />
-                  <img
-                    src="img/medico-3.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-1.png" />
-                  <img
-                    src="img/medico-1.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-2.png" />
-                  <img
-                    src="img/medico-2.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-3.png" />
-                  <img
-                    src="img/medico-3.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-1.png" />
-                  <img
-                    src="img/medico-1.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-2.png" />
-                  <img
-                    src="img/medico-2.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-3.png" />
-                  <img
-                    src="img/medico-3.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-            <li class="carousel__item">
-              <article class="card card--doc">
-                <picture>
-                  <source type="image/webp" srcset="img/medico-1.png" />
-                  <img
-                    src="img/medico-1.png"
-                    width="360"
-                    height="360"
-                    alt="Profesional de Clínica Urgenterap"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </picture>
-                <h3>Nombre y apellido</h3>
-                <p>Especialidad</p>
-                <a
-                  class="more"
-                  href="https://horarios.clinicaurgenterap.com/reserve"
-                  >Reservar hora →</a
-                >
-              </article>
-            </li>
-          </ul>
-        </div>
-        <p>
-          <a
-            class="textlink"
-            href="https://clinicaurgenterap.com/cartilla-de-medicos/"
-            >Ver todos los médicos →</a
-          >
-        </p>
-      </section>
-
-      <section class="band" aria-labelledby="esp-t">
-        <div class="w band__inner">
-          <h2 id="esp-t">Especialidades y estudios</h2>
-          <ul class="chips">
-            <li>Cardiología</li>
-            <li>Pediatría General</li>
-            <li>Ginecología</li>
-            <li>Dermatología</li>
-            <li>Oftalmología</li>
-            <li>Neurología</li>
-            <li>Endocrinología</li>
-            <li>Psiquiatría</li>
-            <li>Nutrición Clínica</li>
-            <li>Urología</li>
-            <li>Odontología</li>
-            <li>Fisioterapia</li>
-            <li>Psicología</li>
-            <li>Ecografías</li>
-            <li>Holter</li>
-            <li>Ergometría</li>
-            <li>Radiología Digital</li>
-          </ul>
-          <a
-            class="textlink textlink--light"
-            href="https://clinicaurgenterap.com/cartilla-de-medicos/"
-            >Ver la cartilla completa →</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <footer class="w site-footer" id="contacto">
-      <div class="site-footer__col">
-        <img
-          src="img/logo-urgenterap.png"
-          alt="Clínica Urgenterap"
-          width="300"
-          height="98"
-          loading="lazy"
-          decoding="async"
-          class="site-footer__logo"
-        />
-        <h2>Estamos en Carrasco</h2>
-        <address>
-          Potosí 1690, Montevideo<br />
-          <a href="tel:+59826000806">2600 0806</a><br />
-          <a href="mailto:contacto@clinicaurgenterap.com"
-            >contacto@clinicaurgenterap.com</a
-          >
-        </address>
-        <p class="muted">Lunes a viernes 7:45 a 21:00 · Sábados 7:45 a 20:00</p>
-      </div>
-      <nav class="site-footer__col" aria-label="Enlaces de interés">
-        <p class="eyebrow">Seguinos</p>
-        <a href="https://www.instagram.com/urgenterap/" rel="me">Instagram</a>
-        <a href="https://www.facebook.com/Urgenterap/" rel="me">Facebook</a>
-        <a href="https://clinicaurgenterap.com/trabaja-con-nosotros/"
-          >Trabajá con nosotros</a
-        >
-        <a href="https://horarios.clinicaurgenterap.com/acceso_privados"
-          >Acceso privados</a
-        >
-        <a href="legal.html">Política de privacidad</a>
+  <header class="site-header">
+    <div class="w header-inner">
+      <a class="logo" href="./" aria-label="Clínica Urgenterap, inicio">
+        <img src="img/logo-urgenterap.png" alt="Clínica Urgenterap" width="300" height="98">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+      <nav class="site-nav" id="menu" aria-label="Principal">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="https://clinicaurgenterap.com/cartilla-de-medicos/">Médicos</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--primary" href="https://horarios.clinicaurgenterap.com/reserve">Reservá tu hora</a>
       </nav>
-      <p class="site-footer__legal muted">
-        © <span id="year">2026</span> Clínica Urgenterap. Todos los derechos
-        reservados.
-      </p>
-    </footer>
-  </body>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="w hero" id="nosotros">
+      <div class="hero__text">
+        <p class="motto"><span class="dot" aria-hidden="true"></span>Medicina altamente familiar</p>
+        <h1>Consultas y estudios médicos particulares <span class="accent">en Carrasco</span></h1>
+        <p class="lead">Clínica médica privada en el centro de Carrasco, con más de 55 años de reconocida trayectoria. Atendemos urgencias y contamos con policlínicas de todas las especialidades médicas y quirúrgicas.</p>
+        <div class="actions">
+          <a class="btn btn--accent" href="https://horarios.clinicaurgenterap.com/reserve">Reservá tu hora</a>
+          <a class="btn btn--outline" href="tel:+59826000806">Llamar al 2600 0806</a>
+          <a class="btn btn--outline" href="https://wa.me/59892962189">Consultar por WhatsApp</a>
+        </div>
+        <ul class="stats">
+          <li><strong>55+</strong> años juntos</li>
+          <li><strong>80+</strong> profesionales</li>
+          <li><strong>4.6</strong> en Google</li>
+        </ul>
+      </div>
+      <div class="hero__media">
+        <picture>
+          <source type="image/webp" srcset="img/clinica-640.webp 640w, img/clinica-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 540px">
+          <img src="img/clinica-1200.jpg" srcset="img/clinica-640.jpg 640w, img/clinica-1200.jpg 1200w" sizes="(max-width: 900px) 100vw, 540px" width="1200" height="668" alt="Fachada de Clínica Urgenterap en Potosí 1690, Carrasco" fetchpriority="high" decoding="async">
+        </picture>
+        <ul class="hours" aria-label="Horarios de atención">
+          <li><strong>Lunes a viernes</strong><span>7:45 a 21:00</span></li>
+          <li><strong>Sábados</strong><span>7:45 a 20:00</span></li>
+          <li class="hours__addr">Potosí 1690, Carrasco</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="w section section--tight" aria-labelledby="accesos-t">
+      <h2 class="sr-only" id="accesos-t">Cómo podemos ayudarte</h2>
+      <div class="grid grid--photo">
+        <article class="card card--top card--photo">
+          <picture>
+            <source type="image/webp" srcset="img/acceso-libreta.webp">
+            <img src="img/acceso-libreta.jpg" width="800" height="500" alt="Médica controlando la presión arterial a un paciente durante una prueba de esfuerzo" loading="lazy" decoding="async">
+          </picture>
+          <div class="card__body">
+            <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Agendarse para psicofísico de libreta de conducir</a></h3>
+            <p>Examen médico para libreta de conducir, habilitados en Montevideo y Canelones.</p>
+            <span class="more" aria-hidden="true">Agendarse →</span>
+          </div>
+        </article>
+        <article class="card card--top card--photo">
+          <picture>
+            <source type="image/webp" srcset="img/acceso-carnet.webp">
+            <img src="img/acceso-carnet.jpg" width="800" height="500" alt="Médica extrayendo una muestra de sangre a un paciente" loading="lazy" decoding="async">
+          </picture>
+          <div class="card__body">
+            <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Agendarse para carnet de salud</a></h3>
+            <p>Reservá tu hora online para tu carnet de salud.</p>
+            <span class="more" aria-hidden="true">Agendarse →</span>
+          </div>
+        </article>
+        <article class="card card--top card--photo">
+          <picture>
+            <source type="image/webp" srcset="img/acceso-consultas.webp">
+            <img src="img/acceso-consultas.jpg" width="800" height="500" alt="Estetoscopio y recetario de Clínica Urgenterap sobre el escritorio" loading="lazy" decoding="async">
+          </picture>
+          <div class="card__body">
+            <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Agendarse para consultas o estudios</a></h3>
+            <p>Consultas con especialistas, ecografías y otros estudios.</p>
+            <span class="more" aria-hidden="true">Agendarse →</span>
+          </div>
+        </article>
+      </div>
+      <p class="note">¿Ya tenés una hora? <a href="https://horarios.clinicaurgenterap.com/cancelar_consulta">Cancelar cita</a></p>
+    </section>
+
+    <!-- TODO: reemplazar fotos, nombres, especialidades y alt por los datos reales de cada profesional (10 tarjetas; las fotos se repiten como provisorias) -->
+    <section class="w section" aria-labelledby="equipo-t">
+      <div class="section__bar">
+        <header class="section__head">
+          <p class="eyebrow">Equipo médico</p>
+          <h2 id="equipo-t">Elegí a tu profesional</h2>
+        </header>
+        <div class="carousel__controls">
+          <button class="carousel__btn carousel__btn--toggle" type="button" data-carousel-toggle data-playing="true" aria-label="Pausar desplazamiento automático" aria-controls="equipo-lista">
+            <svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg>
+            <svg class="i-play" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4 2.5v11l9-5.5z"/></svg>
+          </button>
+          <button class="carousel__btn" type="button" data-carousel-prev aria-label="Profesionales anteriores" aria-controls="equipo-lista">‹</button>
+          <button class="carousel__btn" type="button" data-carousel-next aria-label="Más profesionales" aria-controls="equipo-lista">›</button>
+        </div>
+      </div>
+      <div class="carousel" data-carousel role="region" aria-roledescription="carrusel" aria-label="Equipo médico">
+        <ul class="carousel__track" id="equipo-lista" tabindex="0">
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-1.webp">
+                <img src="img/medico-1.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-2.webp">
+                <img src="img/medico-2.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-3.webp">
+                <img src="img/medico-3.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-1.webp">
+                <img src="img/medico-1.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-2.webp">
+                <img src="img/medico-2.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-3.webp">
+                <img src="img/medico-3.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-1.webp">
+                <img src="img/medico-1.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-2.webp">
+                <img src="img/medico-2.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-3.webp">
+                <img src="img/medico-3.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="card card--doc">
+              <picture>
+                <source type="image/webp" srcset="img/medico-1.webp">
+                <img src="img/medico-1.jpg" width="360" height="360" alt="Profesional de Clínica Urgenterap" loading="lazy" decoding="async">
+              </picture>
+              <h3>Nombre y apellido</h3>
+              <p>Especialidad</p>
+              <a class="more" href="https://horarios.clinicaurgenterap.com/reserve">Reservar hora →</a>
+            </article>
+          </li>
+        </ul>
+      </div>
+      <p><a class="textlink" href="https://clinicaurgenterap.com/cartilla-de-medicos/">Ver todos los médicos →</a></p>
+    </section>
+
+    <section class="w section" id="servicios" aria-labelledby="servicios-t">
+      <header class="section__head">
+        <p class="eyebrow">Servicios</p>
+        <h2 id="servicios-t">Todo en un mismo lugar</h2>
+      </header>
+      <div class="grid">
+        <article class="card">
+          <h3><a class="card__link" href="https://clinicaurgenterap.com/consultas-con-especialistas/">Consultas y especialidades</a></h3>
+          <p>Medicina interna, especialidades y atención odontológica.</p>
+          <span class="more" aria-hidden="true">Ver más →</span>
+        </article>
+        <article class="card">
+          <h3><a class="card__link" href="https://clinicaurgenterap.com/estudios-medicos-principales/">Estudios médicos</a></h3>
+          <p>Ecografías, estudios cardiológicos, colposcopias, EcoDoppler, flujometrías y monitoreos fetales.</p>
+          <span class="more" aria-hidden="true">Ver más →</span>
+        </article>
+        <article class="card">
+          <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/castro_gherardi">Análisis clínicos</a></h3>
+          <p>En convenio con el laboratorio Castro-Gherardi: sangre, orina, bacteriología y PAP.</p>
+          <span class="more" aria-hidden="true">Ver más →</span>
+        </article>
+        <article class="card">
+          <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Radiografías digitales</a></h3>
+          <p>Equipo digital de última generación.</p>
+          <span class="more" aria-hidden="true">Reservar →</span>
+        </article>
+        <article class="card">
+          <h3><a class="card__link" href="https://clinicaurgenterap.com/libreta-de-conducir-montevideo-y-canelones/">Libreta de conducir</a></h3>
+          <p>Habilitados por las Intendencias de Montevideo y Canelones para el examen médico de libreta amateur.</p>
+          <span class="more" aria-hidden="true">Ver más →</span>
+        </article>
+        <article class="card">
+          <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Seguros médicos privados</a></h3>
+          <p>Atención a socios de Blue Cross &amp; Blue Shield, Medicare y Summum.</p>
+          <span class="more" aria-hidden="true">Reservar →</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="w section" aria-labelledby="destacadas-t">
+      <h2 class="h2--sm" id="destacadas-t">Prestaciones más buscadas</h2>
+      <div class="grid grid--sm">
+        <!-- Ajustar los enlaces si cada agenda tiene su propia URL de reserva -->
+        <article class="card card--top">
+          <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Ecografías</a></h3>
+          <p>Reservá tu ecografía en pocos pasos.</p>
+          <span class="more" aria-hidden="true">Ver disponibilidad →</span>
+        </article>
+        <article class="card card--top">
+          <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Dermatología</a></h3>
+          <p>Consultas para el cuidado de tu piel.</p>
+          <span class="more" aria-hidden="true">Ver disponibilidad →</span>
+        </article>
+        <article class="card card--top">
+          <h3><a class="card__link" href="https://horarios.clinicaurgenterap.com/reserve">Cardiología</a></h3>
+          <p>Consultas y estudios cardiológicos.</p>
+          <span class="more" aria-hidden="true">Ver disponibilidad →</span>
+        </article>
+        <article class="card card--top">
+          <h3><a class="card__link" href="https://clinicaurgenterap.com/libreta-de-conducir-montevideo-y-canelones/">Libreta de conducir</a></h3>
+          <p>Examen médico para libreta amateur en Montevideo y Canelones.</p>
+          <span class="more" aria-hidden="true">Ver disponibilidad →</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="esp-t">
+      <div class="w band__inner">
+        <h2 id="esp-t">Especialidades y estudios</h2>
+        <ul class="chips">
+          <li>Cardiología</li><li>Pediatría General</li><li>Ginecología</li><li>Dermatología</li><li>Oftalmología</li><li>Neurología</li><li>Endocrinología</li><li>Psiquiatría</li><li>Nutrición Clínica</li><li>Urología</li><li>Odontología</li><li>Fisioterapia</li><li>Psicología</li><li>Ecografías</li><li>Holter</li><li>Ergometría</li><li>Radiología Digital</li>
+        </ul>
+        <a class="textlink textlink--light" href="https://clinicaurgenterap.com/cartilla-de-medicos/">Ver la cartilla completa →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="w site-footer" id="contacto">
+    <div class="site-footer__col">
+      <img src="img/logo-urgenterap.png" alt="Clínica Urgenterap" width="300" height="98" loading="lazy" decoding="async" class="site-footer__logo">
+      <h2>Estamos en Carrasco</h2>
+      <address>
+        Potosí 1690, Montevideo<br>
+        <a href="tel:+59826000806">2600 0806</a><br>
+        <a href="mailto:contacto@clinicaurgenterap.com">contacto@clinicaurgenterap.com</a>
+      </address>
+      <p class="muted">Lunes a viernes 7:45 a 21:00 · Sábados 7:45 a 20:00</p>
+    </div>
+    <nav class="site-footer__col" aria-label="Enlaces de interés">
+      <p class="eyebrow">Seguinos</p>
+      <a href="https://www.instagram.com/urgenterap/" rel="me">Instagram</a>
+      <a href="https://www.facebook.com/Urgenterap/" rel="me">Facebook</a>
+      <a href="https://clinicaurgenterap.com/trabaja-con-nosotros/">Trabajá con nosotros</a>
+      <a href="https://horarios.clinicaurgenterap.com/acceso_privados">Acceso privados</a>
+      <a href="politica-de-privacidad/">Política de privacidad</a>
+    </nav>
+    <p class="site-footer__legal muted">© <span data-year>2026</span> Clínica Urgenterap. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>

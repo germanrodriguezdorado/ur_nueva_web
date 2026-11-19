@@ -14,10 +14,9 @@
 /* Maquetación: índice + texto */
 .legal { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 56px; align-items: start; padding-top: 32px; padding-bottom: 72px; }
 .legal__aside { position: sticky; top: 24px; padding-top: 16px; }
-.toc ol { counter-reset: toc; list-style: none; margin: 8px 0 0; padding-left: 0; }
-.toc li { list-style: none; }
+.toc ol { counter-reset: toc; margin-top: 8px; }
 .toc a { display: flex; gap: 12px; padding: 8px 0; font-size: .9375rem; color: var(--muted); }
-.toc a::before { counter-increment: toc; content: counter(toc) "."; min-width: 22px; font-weight: 600; color: var(--green); }
+.toc a::before { counter-increment: toc; content: counter(toc); min-width: 22px; font-weight: 600; color: var(--green); }
 .toc a:hover, .toc a[aria-current="true"] { color: var(--green); }
 .toc a[aria-current="true"] { font-weight: 600; }
 

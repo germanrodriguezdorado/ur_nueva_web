@@ -1,11 +1,11 @@
-/* Clínica Urgenterap – comportamiento mínimo de la portada */
+/* Clínica Urgenterap – comportamiento de las páginas */
 (function () {
   'use strict';
 
   // Menú móvil accesible
-  var toggle = document.querySelector('.nav-toggle');
-  var menu = document.getElementById('menu');
-  if (toggle && menu) {
+  document.querySelectorAll('.nav-toggle').forEach(function (toggle) {
+    var menu = document.getElementById(toggle.getAttribute('aria-controls'));
+    if (!menu) return;
     var setOpen = function (open) {
       toggle.setAttribute('aria-expanded', String(open));
       menu.classList.toggle('is-open', open);
@@ -22,7 +22,7 @@
         toggle.focus();
       }
     });
-  }
+  });
 
   // Carrusel de profesionales: botones, desplazamiento automático y pausa
   document.querySelectorAll('[data-carousel]').forEach(function (root) {
@@ -66,7 +66,6 @@
     window.addEventListener('resize', update);
     update();
 
-    // Desplazamiento automático (pausable)
     if (toggle) {
       toggle.addEventListener('click', function () { userPaused = !userPaused; render(); });
     }
@@ -94,8 +93,9 @@
   });
 
   // Año vigente en el pie
-  var year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
 
   // Índice de páginas legales: marca la sección visible
   var tocLinks = document.querySelectorAll('.toc a[href^="#"]');
