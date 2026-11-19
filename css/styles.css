@@ -93,7 +93,8 @@ address { font-style: normal; }
 .card__actions .more:hover { text-decoration: underline; }
 .grid--photo { grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
 .card--photo { padding: 0; gap: 0; overflow: hidden; }
-.card--photo img { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; background: var(--mint); }
+.card--photo img { width: 100%; height: auto; aspect-ratio: 6 / 5; object-fit: cover; background: var(--white); }
+.card--photo img.img--contain { object-fit: contain; background: #f4f4f4; }
 .card--photo .card__body { display: flex; flex: 1; flex-direction: column; gap: 10px; padding: 22px 28px 26px; }
 .card--photo:has(.card__link):hover img { filter: brightness(1.03); }
 .card--doc { align-items: center; text-align: center; gap: 0; padding: 32px 24px; }
